@@ -60,6 +60,7 @@ tl.from(".navbar", {
 });
 
 
+
 gsap.from("#about .section-heading", {
     y: 60,
     opacity: 0,
@@ -73,7 +74,7 @@ gsap.from("#about .section-heading", {
 });
 
 
-// SKILLS
+
 
 gsap.from("#skills .skill", {
     y: 60,

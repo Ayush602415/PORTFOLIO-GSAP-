@@ -10,10 +10,23 @@ html{
 }
 
 body{
-    background:#080808;
+    margin:0;
+    background-color:#080808;
     color:#f5f5f5;
     font-family:Arial, sans-serif;
     line-height:1.5;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0,0,0,.78)
+        ),
+        url("/profile.png");
+
+    background-size:420px auto;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
 a{
@@ -73,7 +86,7 @@ a{
 }
 
 .hero{
-    min-height:100vh;
+    min-height:200px;
     padding:110px 7% 50px;
     display:grid;
     grid-template-columns:1.1fr .9fr;
@@ -81,6 +94,8 @@ a{
     gap:30px;
     position:relative;
     overflow:hidden;
+
+
 }
 
 .hero::before{
@@ -91,8 +106,8 @@ a{
     font-size:220px;
     font-weight:900;
     line-height:1;
-    color:#111;
-    z-index:-1;
+    color:rgba(255,255,255,.04);
+    z-index:0;
     letter-spacing:-10px;
 }
 
@@ -101,7 +116,14 @@ a{
     position:relative;
     z-index:2;
 }
-
+.hero-right{
+    height:600px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+}
 .small-text{
     color:#b7ff3c;
     font-size:16px;
@@ -224,21 +246,9 @@ a{
     padding-left:25px;
 }
 
-.hero-right img{
-    width:420px;
-    height:560px;
-    object-fit:contain;
-    position:absolute;
-    z-index:3;
-}
 
 .section{
     padding:100px 7%;
-}
-
-.about,
-.projects{
-    background:#0d0d0d;
 }
 
 .section-number{
@@ -299,9 +309,7 @@ a{
     color:#777;
 }
 
-.skills{
-    background:#080808;
-}
+
 
 .skills-container{
     display:grid;
@@ -426,9 +434,11 @@ a{
 .project-details a i{
     margin-left:5px;
 }
-
+.about,
+.skills,
+.projects,
 .experience{
-    background:#080808;
+    background:transparent;
 }
 
 .timeline{
